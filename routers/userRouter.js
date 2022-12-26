@@ -7,8 +7,8 @@ router.post("/add", (req, res) => {
 
   new Model(req.body)
     .save()
-    .then(() => {
-      res.status(200).json({ message: "success" });
+    .then((data) => {
+      res.status(200).json(data);
     })
     .catch((err) => {
       console.error(err);
